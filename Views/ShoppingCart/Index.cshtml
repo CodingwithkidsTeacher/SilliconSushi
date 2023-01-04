@@ -1,0 +1,39 @@
+﻿@model CartViewModel
+
+
+<h2> Your Shopping Cart</h2>
+<h4> See a list of your selected delicious sushis below:</h4>
+
+<table class="table table-striped table-hover table-bordered table-light">
+    <thead>
+        <tr>
+            <th> Selected Amount</th>
+            <th> Item Name</th>
+            <th> Price </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.shoppingCartItems)
+        {
+        <tr>
+            <td>@item.Amount</td>
+            <td>@item.Sushi.Name</td>
+            <td>@item.Sushi.Price </td>
+            <td> <a class="btn btn-danger" asp-controller="ShoppingCart" 
+                       asp-action="RemoveFromCart" asp-route-sushiId="@item.Sushi.SushiId">Remove</a> </td>
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2" class="text-custom text-center">Total: </td>
+            <td colspan="2" class="text-custom text-left"> @Model.totalPrice </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-success" asp-controller="Order" 
+                       asp-action="Checkout">Proceed to Checkout</a>
+</div>

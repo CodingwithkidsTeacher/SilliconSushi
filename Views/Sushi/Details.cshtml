@@ -1,0 +1,25 @@
+﻿@model Sushi
+
+<div class="thumbnail">
+    <h3>@Model.Name</h3>
+
+    <img src="@Model.ImageUrl" class="thumbnailImg" />
+
+    <div class="caption-full customView">
+        <h3 class="float-end">@Model.Price.ToString("C")</h3>
+        <h3>
+            <a asp-controller="Sushi"
+               asp-action="Details"
+               asp-route-id="@Model.SushiId">@Model.Name</a>
+        </h3>
+        <p>@Model.ShortDescription</p>
+        <p>@Model.LongDescription</p>
+
+        <div class="addToCart">
+            <p> <a class="btn btn-primary" 
+                   asp-controller="ShoppingCart" 
+                   asp-action="AddToCart" asp-route-sushiId="@Model.SushiId">Add to cart </a></p>
+        </div>
+    </div>
+    
+</div>

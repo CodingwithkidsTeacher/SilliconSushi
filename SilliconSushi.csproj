@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap-theme.css" />
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap-theme.min.css" />
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap.css" />
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\lib\twitter-bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\twitter-bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\lib\twitter-bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\lib\twitter-bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\lib\twitter-bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\lib\twitter-bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\lib\twitter-bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\lib\twitter-bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\twitter-bootstrap\js\npm.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
